@@ -149,3 +149,18 @@ function deleteTask(toDoItem){
         }
     })
 }
+
+const advancedOptions = document.querySelector("#advancedOptions");
+const optionsContainer = document.querySelector("#optionsContainer");
+
+document.querySelector("#advancedBtn").addEventListener("click", showAdvanced);
+
+function showAdvanced(){
+    if(advancedOptions.style.maxHeight === "500px") {
+        optionsContainer.style.opacity = 0;
+        advancedOptions.style.maxHeight = 0;
+    } else {
+        advancedOptions.style.maxHeight = "500px";
+        setTimeout(() => optionsContainer.style.opacity = 1, 100);
+    }
+}
